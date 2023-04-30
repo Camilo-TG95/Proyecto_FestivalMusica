@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock & EDM Festival</title>
+    <meta name="description" content="Pagina Web de Rock & EDM Festival">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="build/css/app.css" as="style">
+</head>
+<body>
+    <header class="header">
+        <div class="contenedor contenido-header">
+            <h1>Rock & EMD Festival</h1>
+
+            <!-- Para que los enlaces funciones de manera tal que cuando lo presiones vayan a una parte especifica del la misma pagina
+            se pone #id, aqui se pone el id del elemnto del htlm al que quieres ir con cada enlace. 
+            y para que vaya suve por cada elemento se programa en el app.js-->
+            <nav class="navegacion-principal"> 
+                <a href="#lineup" class="">Line Up</a>
+                <a href="#galeria" class="">Galería</a>
+                <a href="#boletos" class="">Boletos</a>
+            </nav>
+        </div>
+    </header>
+
+<!-- Creamos un div que encierre todo el video junto al gradiente-->
+    <div class="video">
+        <!-- Creamos un div con la clase de overlay para que contenga el gradiente y porder darle ese efecto-->
+        <div class="overlay">
+            <div class="contenedor contenido-video">
+                <h2>Rock & EMD Festival</h2>
+                <p>Febrero 2023, Montevideo, Uruguay.</p>
+
+            </div>
+
+            <!--el video se añade de las siguiente manera, tiene que tener los atributos 
+                de autoplay para que se reproduzca cuando se abra la pagina y muted para que funcione en todos los navegadores-->
+         
+        </div>
+        <video autoplay muted loop>
+            <source src="video/concierto.mp4" type="video/mp4">
+            <source src="video/concierto.ogg" type="video/ogg">
+            <source src="video/concierto.webm" type="video/webm">
+            <!-- Es importante siempre empezar con el video en mp4 porque sino algunos navegadores van a dar error-->
+        </video>
+    </div>
+
+    <section class="contenedor sobre-festival">
+
+       <picture>
+            <source srcset="build/img/imagen_vocalista.avif" type="image/avif">
+            <source srcset="build/img/imagen_vocalista.webp" type="image/webp">
+
+            <img loading="lazy" width="200" heigth="300" src="build/img/imagen_vocalista.jpg" alt="Imagen Vocalista">
+       <!-- Se le definen estos parametros de width y heigth para darle un mejor performance 
+    Esto es recomendado por google, despues ir a la hoja de estilos y ponerle un width 100% y heigth auto para que se vea bien -->
+        </picture>
+
+        <div class="contenido-festival">
+
+            <h2>Rock & EDM Festival</h2>
+            <p class="fecha">Febrero, 2023, Montevideo, Uruguay.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, molestiae!
+                 Ratione enim sint, error, non nihil consequatur placeat odit autem beatae totam 
+                 doloribus, natus dolor eos eum sunt perspiciatis quaerat. Quae quaerat, nisi 
+                 illum repellendus nostrum aperiam recusandae sunt sed consectetur, vel nulla 
+                 tempora, dolore natus deserunt dicta rem minima quod minus?</p>
+        </div>
+
+    </section>
+
+    <section class="lineup" id="lineup">
+        <h3>Line Up</h3>
+
+        <p class="dia">Viernes 21</p>
+
+        <div class="contenedor escenarios-contenedor">
+            <div class="escenario rock bg-amarillo">
+                <p class="nombre-escenario">Escenario Rock</p>
+
+                <ul class="calendario">
+                    <li>
+                        24:00 | <span>Metallica</span>
+                    </li>
+                    <li>
+                        22:00 | <span>Pearl Jam</span>
+                    </li>
+                    <li>
+                        20:00 | <span>KoRn</span>
+                    </li>
+                    <li>
+                        19:00 | <span>Muse</span>
+                    </li>
+                    <li>
+                        18:00 | <span>Breaking Benjamin</span>
+                    </li>
+                    <li>
+                        17:00 | <span>30 Seconds to Mars</span>
+                    </li>
+                
+                </ul>
+            </div> <!--.escenario-->
+        
+
+            <div class="escenario edm bg-verde">
+                <p class="nombre-escenario">Escenario EMD</p>
+
+                <ul class="calendario">
+                    <li>
+                        24:00 | <span>Deadmau5</span>
+                    </li>
+                    <li>
+                        22:00 | <span>Tïesto</span>
+                    </li>
+                    <li>
+                        20:00 | <span>Hardwell</span>
+                    </li>
+                    <li>
+                        19:00 | <span>Dash Berlin</span>
+                    </li>
+                    
+                    <li>
+                        18:00 | <span>Fedde Legrand</span>
+                    </li>
+                    <li>
+                        17:00 | <span>Audien</span>
+                    </li>
+                
+                </ul>
+            </div> <!--.escenario-->
+        </div><!--escenarios-contenedor-->
+
+        <p class="dia">Sábado 22</p>
+
+        <div class="contenedor escenarios-contenedor">
+            <div class="escenario rock bg-verde">
+                <p class="nombre-escenario">Escenario Rock</p>
+
+                <ul class="calendario">
+                    <li>
+                        24:00 | <span>Red Hot Chili Peppers</span>
+                    </li>
+                    <li>
+                        22:00 | <span>The Killers</span>
+                    </li>
+                    <li>
+                        20:00 | <span>Deftones</span>
+                    </li>
+                    <li>
+                        19:00 | <span>Limp Bizkit</span>
+                    </li>
+
+                    <li>
+                        18:00 | <span>Papa Roach</span>
+                    </li>
+                    <li>
+                        17:00 | <span>Lamb of God</span>
+                    </li>
+                
+                </ul>
+            </div> <!--.escenario-->
+        
+            <div class="escenario edm bg-amarillo">
+                <p class="nombre-escenario">Escenario EMD</p>
+
+                <ul class="calendario">
+                    <li>
+                        24:00 | <span>Paul Van Dyk</span>
+                    </li>
+                    <li>
+                        22:00 | <span>Armin Van Buuren</span>
+                    </li>
+                    <li>
+                        20:00 | <span>Above & Beyond</span>
+                    </li>
+                    <li>
+                        19:00 | <span>Eric Prdyz</span>
+                    </li>
+                    
+                    <li>
+                        18:00 | <span>Ferry Corsten</span>
+                    </li>
+                    <li>
+                        17:00 | <span>Vini Vici</span>
+                    </li>
+                
+                </ul>
+            </div> <!--.escenario-->
+        </div><!--escenarios-contenedor-->
+
+    </section>
+
+    <!-- Aqui creamos un section que va almacenar la galeria
+    las imagenes se van a insertar dentro del unorder list con codigo de JS-->
+    <section id="galeria" class="galeria contenedor">
+        <h3>Galería</h3>
+
+        <ul class="galeria-imagenes">
+
+            
+        </ul>
+
+    </section>
+
+     <section id="boletos" class="boletos bg-verde"> 
+
+        <h3>Boletos</h3>
+        <div class="contenedor-boletos contenedor">
+            <div class="basico pase">
+                <p>Pase 1 Día</p>
+                <header class="header-pase">
+                    <p>Incluye</p>
+                </header>
+                <ul>
+                    <li>Acceso a ambos escenarios</li>
+                    <li>Comida y Bebida</li>
+                </ul>
+                <footer class="footer-pase">
+                    <p>$100</p>
+                </footer>
+            </div>
+            <div class="premium pase">
+                <p>Pase 2 Días</p>
+                <header class="header-pase">
+                    <p>Incluye</p>
+                </header>
+                <div class="body-pase">
+                    <ul>
+                        <li>Acceso a ambos escenarios</li>
+                        <li>Comida y Bebida</li>
+                        <li>Camisa del Evento</li>
+                        <li>Acceso VIP</li>
+                    </ul>
+                </div>
+                <footer class="footer-pase">
+                    <p>$180$</p>
+                </footer>
+            </div>
+        </div>
+
+     </section>
+   
+     <footer class="site-footer">
+        <p>Rock & EDM Festival. Todos los derechos reservados</p>
+     </footer>
+
+    <script src="build/js/app.js"></script>
+
+
+</body>
+</html>

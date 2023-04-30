@@ -1,0 +1,67 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.galeria {
+    padding: 5rem 0;
+
+    h3 {
+        text-align: center;
+    }
+
+    
+}
+
+.galeria-imagenes {
+    @include m.resetear-lista;
+    @include m.grid(2, 3rem);
+    @include m.telefono {
+        @include m.grid(3, 3rem);
+    }
+    @include m.tablet {
+         @include m.grid(4, 2rem);
+    }
+    @include m.desktop {
+        @include m.grid(6, 3rem);
+    }
+}
+
+.overlay {
+    position: fixed; // estos 5 codigos hacen que la imegen se tenga una posicion fija 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;// para que tome todo el tamaño disponible 
+    height: 100%;
+
+    // para poder centrar la imagen
+
+    display: grid;
+    place-items: center;
+
+    // Para agregar la sombra de fondo
+    background-color: rgb(0 0 0 / .5);
+
+    picture { // como picture es un hijo del overlay se la da un maximo de 50 rem para que no ocupe toda la pantalla 
+        display: block;  // Se le coloca un display block para que el max-width afecte a la imagen 
+        max-width: 80rem;
+    }
+}
+
+
+.btn-cerrar {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: v.$blanco;
+    color: v.$negro;
+    display: grid;
+    place-items: center;
+    font-weight: 900;
+
+    &:hover{
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,64 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+header {
+    background-color: darken(v.$verde, 10%);
+
+    @include m.tablet { // esto codigo se activa cuando pasamos la seccion sobre-festival haciendo scroll
+       
+        &.fijo {
+            left: 0; // estos dos codigos corrigen la posicion de la barra cuando se le da el padding al body (solo se activa con el evento scroll)
+            top: 0;
+            position: fixed; // fija este elemento en la pagina
+            width: 100%;
+            box-shadow: .4rem .4rem .4rem #333; // esto le da sombra para que temga el efecto de que esta flotando
+            
+        }
+    }
+
+    h1 {
+        color: v.$blanco;
+        text-align: center;
+        @include m.tablet{
+            margin: 0;  
+        }
+        
+    }
+    .contenido-header {
+
+        padding: 2rem;
+    
+        @include m.tablet{
+            display: flex;
+            align-content: center;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+    }
+}
+// No se recomienda anidar muchos selectore porque despues puede ser un problema 
+// por eso se saco la navegacion del header
+
+.navegacion-principal {
+    a {
+        display: block;
+        text-align: center;
+        color: v.$blanco;
+        font-size: 2.4rem;
+        margin-bottom: 1rem;
+
+        &:hover { // Importante, se coloca el & para que cuando compile este codigo elimine el espacio entre la a y el hover
+            color: v.$amarillo;
+        }
+
+    }
+    @include m.tablet{
+        display: flex;
+        gap: 2rem;
+        margin: 0;
+    }
+}
+
+
+

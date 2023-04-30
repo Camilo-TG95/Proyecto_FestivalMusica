@@ -1,0 +1,40 @@
+@use 'variables' as v;
+
+// De esta forma se crea un mixin para un media querie
+// pero para que admita un codigo en bloque es necesario ponerle un @content
+@mixin telefono {
+    @media(min-width: v.$telefono){
+        @content;  // todo el contenido que se ponga entre llaves cunado se llame a este maxin se va a almacenar en este content
+    }
+}
+
+@mixin tablet {
+    @media (min-width: v.$tablet){ // estos parametros se pueden poner en forma de variables en el archivo de variables.scss
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: v.$desktop){
+        @content;
+    }
+}
+
+@mixin desktopXL {
+    @media (min-width: v.$desktopXL){
+        @content;
+    }
+}
+
+// Creamos un mixin inteligente al cual se le pued programas el # de columnas y el gap
+@mixin grid($columnas, $gap) {
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    gap: $gap;
+}
+
+@mixin resetear-lista{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
